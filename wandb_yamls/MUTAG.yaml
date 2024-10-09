@@ -1,0 +1,54 @@
+params_config:
+  # data setting
+  data: ["MUTAG"] #'DD', 'PTC_MR', 'NCI1', 'PROTEINS', 'IMDB-BINARY', 'IMDB-MULTI', 'MUTAG', 'COLLAB', 'ENZYMES'
+  fold: [1,2,3,4,5,6,7,8,9,10]
+
+  # model setting
+  model: ["Cluster_GT"] 
+  model_string: ["Cluster_GT"]
+
+  agent_package: [100]
+  ignore_keys: [['seed', 'fold']]
+
+  # fixed setting
+  seed: [0,1,2,3,4,5,6,7,8,9]
+  grad_norm: [1.0]
+  lr_schedule: [true]
+  normalize: [False] 
+  num_epochs: [300]
+  patience: [30]
+
+  # training setting
+  num_hidden: [32]
+  batch_size: [64]
+  lr: [0.0005]
+  weight_decay: [0.00001]
+  dropout: [0.5]
+
+  # input transformation setting
+  use_gnn: [true]
+  conv: ['GIN']
+  num_convs: [1]
+
+  # hyper-parameter for model arch
+  online: [false]
+  layernorm: [true]
+  remain_k1: [false]
+  diffQ: [true]
+  residual: ['cat']
+  kernel_method: ['elu']
+  deepset_layers: [2]
+  pos_enc_rw_dim: [8]
+  pos_enc_lap_dim: [0]
+  n_patches: [8]
+  prop_w_norm_on_coarsened: [true]
+  pos_enc_patch_rw_dim: [0]
+  pos_enc_patch_num_diff: [-1]
+  attention_based_readout: [false]
+  convex_linear_combination: [false]
+
+sweep_config:
+  method: "grid"
+  metric:
+    name: "metric/final"
+    goal: "maximize"
