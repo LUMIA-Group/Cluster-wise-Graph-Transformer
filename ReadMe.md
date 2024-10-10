@@ -10,6 +10,8 @@ In the realm of graph learning, there is a category of methods that conceptualiz
 
 ![Node-to-Cluster Attention Module](figs/N2CAttn.png)
 
+**Related Material:** [Read the paper on arXiv](https://arxiv.org/abs/2410.06746)
+
 ## Dependencies
 
 Ensure the following package versions are installed:
