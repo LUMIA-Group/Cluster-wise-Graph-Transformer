@@ -2,7 +2,7 @@
 
 **This work was accepted as NeurIPS 2024 Spotlight.**
 
-In this work, we present the Cluster-wise Graph Transformer (Cluster-GT), a novel architecture for graph-level tasks that utilizes node clusters as tokens and employs our proposed Node-to-Cluster Attention (N2C-Attn) module.
+This repo is the official implementation for "Cluster-wise Graph Transformer with Dual-granularity Kernelized Attention". In this work, we present the Cluster-wise Graph Transformer (Cluster-GT), a novel architecture for graph-level tasks that utilizes node clusters as tokens and employs our proposed Node-to-Cluster Attention (N2C-Attn) module.
 
 **Related Material:** [Read the paper on arXiv](https://arxiv.org/abs/2410.06746)
 
